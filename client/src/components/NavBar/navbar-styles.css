@@ -1,0 +1,64 @@
+.navbar{
+    height: 70px;
+    top: 0;
+    position: sticky;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);            
+    width: 100%;
+}
+
+
+
+.content ul{
+    display: flex;
+    /* justify-content: space-around; */
+    
+    font-weight: 500;
+    font-size: medium;
+    color: #0b9753;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.content{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.content li{
+    list-style: none;
+    height: 100%;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.content li:hover{
+    background-color: #00e676;
+    color: white;
+}
+
+.logo img{
+    width: 50px;
+    height: 50px;
+}
+
+.logo{
+    margin-left: 2%;
+    font-weight: 600;
+    font-size: x-large;
+    color: #0b9753;
+    font-family: 'Redressed', cursive;
+}
+
+
+.cart img{
+    color: #00e676;
+    height: 40px;
+}

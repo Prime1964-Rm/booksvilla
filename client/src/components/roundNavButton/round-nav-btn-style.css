@@ -1,0 +1,14 @@
+.round-nav-btn{
+    background-color: white;
+    color: #00e676;
+    border-radius: 90%;
+    font-weight: 800;
+    font-size: x-large;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 60px;
+    width: 60px;
+    margin-top: auto;
+    margin-bottom: auto;
+}

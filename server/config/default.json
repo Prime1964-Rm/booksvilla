@@ -1,0 +1,4 @@
+{
+    "mongoURI":"mongodb+srv://rm123:rm123@book-store.jlqua.mongodb.net/BookStore?retryWrites=true&w=majority",
+    "jwtSecret":"PrimeIsBestfrom1964"
+}
