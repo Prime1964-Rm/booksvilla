@@ -5,39 +5,54 @@ import './homepage.styles.css'
 import RoundNavButton from '../../../components/roundNavButton/RoundNavButton';
 import BookCardGroup from '../../../components/BookCardGroup/BookCardGroup';
 import ProductSwiper from '../../../components/ProductSwiper/ProductSwiper'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
+import Footer from '../../../components/Footer/Footer';
+import NavBarComponent from '../../../components/NavBar/NavBar.component';
+// import {useSelector,useDispatch} from 'react-redux'
 
 
- function HomePage(props) {
+function HomePage({ bookList, StoryBooks, Manga }) {
     return (
-        <div className="container homepage">
+        <React.Fragment>
+            <NavBarComponent/>
+            <div className="container homepage">
 
-            <div className="container">
-                <SaleCarousel />
+                <div className="container">
+                    <SaleCarousel />
+                </div>
+
+                <h4 className='list-title mt-5'>Programming & Development</h4>
+                <ProductSwiper dataList={bookList} />
+
+                <h4 className='list-title mt-2'>StoryBooks</h4>
+                <ProductSwiper dataList={StoryBooks} />
+
+                <h4 className='list-title mt-2'>Manga</h4>
+                <ProductSwiper dataList={Manga} />
+
             </div>
-   
-         <h4 className='list-title mt-5'>Top Featured</h4>
-         <ProductSwiper dataList={props.bookList}/>
+        </React.Fragment>
 
-         <h4 className='list-title mt-2'>StoryBooks</h4>
-         <ProductSwiper dataList={props.StoryBooks}/>   
-
-         <h4 className='list-title mt-2'>Manga</h4>   
-         <ProductSwiper dataList={props.Manga}/>   
-
-        </div>
 
     )
 
-  
+
 }
 
-const mapStateToProps = state =>{
+const mapStateToProps = state => {
     return {
-        bookList: state.bookList,
-        StoryBooks: state.Stories,
-        Manga : state.Manga
+        bookList: state.book.bookList.filter(book => {
+            return book.category === 'Programming'
+        }),
+
+        StoryBooks: state.book.bookList.filter(book => {
+            return book.category === 'StoryBook'
+        }),
+        Manga: state.book.bookList.filter(book => {
+            return book.category === 'Manga'
+        })
     }
 }
 
-export default connect(mapStateToProps,null)(HomePage)
+
+export default connect(mapStateToProps)(HomePage)

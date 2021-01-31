@@ -16,10 +16,7 @@
 .content ul{
     display: flex;
     /* justify-content: space-around; */
-    
-    font-weight: 500;
-    font-size: medium;
-    color: #0b9753;
+  
     margin-top: auto;
     margin-bottom: auto;
 }
@@ -32,14 +29,18 @@
     
 }
 
-.content li{
+.content .Link{
     list-style: none;
     height: 100%;
     padding: 10px;
     cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: medium;
+    color: #0b9753;
 }
 
-.content li:hover{
+.content .Link:hover{
     background-color: #00e676;
     color: white;
 }
@@ -61,4 +62,5 @@
 .cart img{
     color: #00e676;
     height: 40px;
+    cursor: pointer;
 }

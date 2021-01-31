@@ -1,0 +1,14 @@
+.cart-dropdown {
+    position: absolute;
+    width: 40vh;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: white;
+    top: 90px;
+    right: 10px;
+    z-index: 5;
+}
+  
