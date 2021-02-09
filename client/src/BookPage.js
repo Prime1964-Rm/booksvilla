@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'; 
 import { Document, Page,pdfjs } from 'react-pdf'; 
+import NavBarComponent from './components/NavBar/NavBar.component';
   
   
 const url =  
@@ -16,9 +17,9 @@ export default function BookPage() {
   
   let rangeOfPages = [1,2,3,4,5];
   /*To Prevent right click on screen*/
-  document.addEventListener("contextmenu", (event) => { 
-    event.preventDefault(); 
-  }); 
+  // document.addEventListener("contextmenu", (event) => { 
+  //   event.preventDefault(); 
+  // }); 
     console.log(rangeOfPages)
   /*When document gets loaded successfully*/
   useEffect(()=>{
@@ -54,11 +55,12 @@ export default function BookPage() {
 
   return ( 
     <> 
+    <NavBarComponent/>
     <div className="main"> 
     <div className='container' style={{ display:'flex', justifyContent:'center', alignItems:'center', padding:'100px'}}>
     <Document 
-      style={{width:"80vw"}}
         file={url} 
+        
       > 
       {
         
@@ -67,7 +69,7 @@ export default function BookPage() {
         }).map(item=>{
           return(
           <Page 
-          
+          // scale={2}
           pageNumber={item}
         />
           )

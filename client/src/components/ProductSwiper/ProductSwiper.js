@@ -21,7 +21,8 @@ const ProductSwiper = ({dataList}) => {
     return (
         <div className="container">
             <Swiper  className='book-swiper'
-                slidesPerView={3}
+                slidesPerView='3'
+                spaceBetween={200}
                 navigation
                 // pagination={{ clickable: true }}
                 // scrollbar={{ draggable: true }}
@@ -31,7 +32,7 @@ const ProductSwiper = ({dataList}) => {
             >
                 {
                     dataList.map((item)=>{
-                        return <SwiperSlide key={item.id}  ><BookCard key={item.id} item={item}/></SwiperSlide>
+                        return <SwiperSlide  key={item.id}  ><BookCard key={item.id} item={item}/></SwiperSlide>
                     })
                 }
             </Swiper>

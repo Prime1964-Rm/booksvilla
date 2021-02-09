@@ -6,7 +6,6 @@ import linkedin from '../../assets/social_icons/linkedin.svg'
 import ytb from '../../assets/social_icons/youtube.svg'
 var FontAwesome = require('react-fontawesome')
 
-
 const Footer = () => {
     return (
         <div className='footer container'>

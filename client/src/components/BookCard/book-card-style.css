@@ -1,15 +1,18 @@
 .book-card{
-    width: 15vw;
+    /* width: 15vw; */
+    width: 230px;
     padding: 1px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
     margin-top: 50px;
     margin-bottom: 50px;
+    transition-timing-function: ease-in-out;
+    transition: transform .5s ;
   }
 
   .book-card:hover{
     box-shadow: 0 4px 8px 0 #00e676, 0 6px 20px 0 #00e676;
-    transform: scale(1.1);
+    transform: scale(1.2);
 } 
   
   .book-card h4{

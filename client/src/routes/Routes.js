@@ -5,6 +5,8 @@ import Login from '../view/pages/Login/Login'
 import RegisterUser from '../view/pages/RegisterUser/Registration'
 import NavBar from '../components/NavBar/NavBar.component'
 import Footer from '../components/Footer/Footer'
+import BookPage from '../BookPage'
+import ProductPage from '../view/pages/productPage/ProductPage'
 
 const Routes = () => {
     
@@ -15,9 +17,11 @@ const Routes = () => {
                 <Route exact path='/' component={HomePage} />
                 <Route exact path='/login' component={Login} />
                 <Route exact path='/signup' component={RegisterUser} />
+                <Route exact path='/pdf' component={BookPage} />
+                <Route exact path='/productdetails' component={ProductPage}/>
                 {/* <Route exact path = '/' /> */}
                 </Switch>
-                <Footer/>
+                <Footer name={'Rishabh'}/>
             </Router>
         </React.Fragment>
     )

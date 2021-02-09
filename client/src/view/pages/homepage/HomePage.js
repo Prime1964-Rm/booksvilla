@@ -16,11 +16,9 @@ function HomePage({ bookList, StoryBooks, Manga }) {
         <React.Fragment>
             <NavBarComponent/>
             <div className="container homepage">
-
                 <div className="container">
                     <SaleCarousel />
                 </div>
-
                 <h4 className='list-title mt-5'>Programming & Development</h4>
                 <ProductSwiper dataList={bookList} />
 
@@ -29,7 +27,6 @@ function HomePage({ bookList, StoryBooks, Manga }) {
 
                 <h4 className='list-title mt-2'>Manga</h4>
                 <ProductSwiper dataList={Manga} />
-
             </div>
         </React.Fragment>
 
