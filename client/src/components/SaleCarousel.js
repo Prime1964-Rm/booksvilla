@@ -5,11 +5,12 @@ import React from 'react';
 export default function SaleCarousel(){
 return(
     
-<Carousel className="book-carousel">
-  <Carousel.Item interval={2000}>
+<Carousel className="book-carousel" >
+  <Carousel.Item interval={3000}>
     <img
       className="d-block"
-      src='https://osterhout.info/wp-content/uploads/bfi_thumb/Book-Sale-Banner-8.8.20-ot72vrbls9pj5mv7tlhsd5lesp58h7cp6yekmbjmao.png'
+      src='https://i0.wp.com/pointwhiskeypublishing.com/wp-content/uploads/2017/12/point-whiskey-books-banner.jpg?ssl=1'
+
       alt="First slide"
     />
     <Carousel.Caption>
@@ -17,10 +18,10 @@ return(
       {/* <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p> */}
     </Carousel.Caption>
   </Carousel.Item>
-  <Carousel.Item interval={2000}>
+  <Carousel.Item interval={3000}>
     <img
       className='d-block'
-      src='https://img.freepik.com/free-vector/book-shop-interior-illustration-various-books-shelves-cashier-desk-indoors-bookstore-with-girl-seller-no-buyers-inside-popular-new-items_109722-486.jpg?size=626&ext=jpg'
+      src='http://www.pumpupyourbook.com/wp-content/uploads/2018/04/The-Chronicles-of-Eledon-Series-Banner.jpg'
     />
 
     <Carousel.Caption>
@@ -28,10 +29,10 @@ return(
       {/* <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> */}
     </Carousel.Caption>
   </Carousel.Item>
-  <Carousel.Item interval={2000}>
+  <Carousel.Item interval={3000}>
     <img
       className="d-block"
-      src='https://mcvt-comet-37.fra1.cdn.digitaloceanspaces.com//previews/53784/preview_53784.jpg'
+      src='https://i0.wp.com/bookcoverscre8tive.com/wp-content/uploads/2012/09/natures-destiny-series-banner-design.jpg?fit=900%2C332&ssl=1'
       alt="Third slide"
     />
 

@@ -15,7 +15,7 @@ function HomePage({ bookList, StoryBooks, Manga }) {
     return (
         <React.Fragment>
             <NavBarComponent/>
-            <div className="container homepage">
+            <div className="container homepage mt-5">
                 <div className="container">
                     <SaleCarousel />
                 </div>
