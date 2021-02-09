@@ -10,6 +10,7 @@ const User = require('../../models/User')
 router.post('/',
 [   check('name','Name is Required').not().isEmpty(),
     check('email','Please include a valid Email').isEmail(),
+    check('gender','Select Gender').not().isEmpty(),
     check('password', 'please enter password with 6 or more characters').isLength({min:6})
 ],
 async (req,res)=>{
@@ -18,7 +19,7 @@ async (req,res)=>{
         return res.status(400).json({errors:errors.array()})
     }
     
-    const {name,email,password}=req.body
+    const {name,email,password,gender}=req.body
 
     try{
         //See if User exists
@@ -38,6 +39,7 @@ async (req,res)=>{
             email,
             avatar,
             password,
+            gender
             
         });
     //Encrypt password
