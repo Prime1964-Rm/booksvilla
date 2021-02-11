@@ -1,0 +1,156 @@
+.navbar{
+    height: 70px;
+    top: 0;
+    position: sticky;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);            
+    width: 100%;
+}
+
+.slider{
+    display: none;
+    color:#00e676;
+    &:hover{
+        color: white;
+        background-color: #00e676;
+    }
+}
+
+
+.content ul{
+    display: flex;
+    /* justify-content: space-around; */
+  
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.content{
+   
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.content .Link{
+    list-style: none;
+    height: 100%;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: medium;
+    color: #0b9753;
+}
+
+.content .Link:hover{
+    background-color: #00e676;
+    color: white;
+}
+
+.logo img{
+    width: 50px;
+    height: 50px;
+}
+
+.logo{
+    margin-left: 2%;
+    font-weight: 600;
+    font-size: x-large;
+    color: #0b9753;
+    font-family: 'Redressed', cursive;
+}
+
+
+.cart img{
+    color: #00e676;
+    height: 40px;
+    cursor: pointer;
+}
+
+
+// @include media-breakpoint-down(xl) { 
+
+// }
+// @include media-breakpoint-down(lg) { 
+
+//  }
+// @include media-breakpoint-down(md) {  
+
+// }
+// @include media-breakpoint-down(sm) {  
+
+// }
+
+@media only screen and (max-width: 1200px) {
+   
+  }
+
+@media only screen and (max-width: 992px) {
+   
+  }
+
+@media only screen and (max-width: 768px) {
+    
+  }
+
+
+
+@media only screen and (max-width: 576px) {
+    .cart img{
+        display: none;
+    }
+    .slider{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top:0;
+        padding: 5px 10px;
+    }
+    .logo{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        left: 0;
+        top:0;
+        img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+        }
+    }
+    .navbar{
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .content .Link{
+
+    }
+    .content{
+        flex-direction: column;
+        width: 100%;
+    }
+    .content ul{
+        // width: 50%;
+        // height: 100%;
+        // display: flex;
+        // justify-content: space-around;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        height: auto;
+    }
+  }
+
+
+

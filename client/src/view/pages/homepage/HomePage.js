@@ -14,8 +14,8 @@ import NavBarComponent from '../../../components/NavBar/NavBar.component';
 function HomePage({ bookList, StoryBooks, Manga }) {
     return (
         <React.Fragment>
-            <NavBarComponent/>
-            <div className="container homepage mt-5">
+            <NavBarComponent />
+            <div className="container homepage mt-5" style={{width:"100%"}}>
                 <div className="container">
                     <SaleCarousel />
                 </div>
