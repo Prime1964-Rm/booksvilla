@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/esm/Col'
@@ -6,6 +6,15 @@ import Row from 'react-bootstrap/esm/Row'
 import './registration.scss'
 
 const RegisterUser = () => {
+    
+    useEffect(()=>{
+        scrollToTop()
+    },[])
+
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    }
+
     return (
         <div className="container form-container" style={{ backgroundColor: "white" }}>
             <img className="loginLogo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIJfVwZ2ouhJCrqQBDb6xDMJBniWgOt3qTg&usqp=CAU"  />

@@ -12,17 +12,16 @@
 }
 
 
-
 .content ul{
     display: flex;
     /* justify-content: space-around; */
-  
+    width: fit-content;
     margin-top: auto;
     margin-bottom: auto;
 }
 
 .content{
-    width: 50%;
+    width: auto;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -31,12 +30,13 @@
 
 .content .Link{
     list-style: none;
+    width: fit-content;
     height: 100%;
     padding: 10px;
     cursor: pointer;
     text-decoration: none;
     font-weight: 500;
-    font-size: medium;
+    font-size: 1rem;
     color: #0b9753;
 }
 
