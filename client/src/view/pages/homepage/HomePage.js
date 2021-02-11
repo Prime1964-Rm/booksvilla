@@ -15,8 +15,8 @@ function HomePage({ bookList, StoryBooks, Manga }) {
     return (
         <React.Fragment>
             <NavBarComponent />
-            <div className="container homepage mt-5" style={{width:"100%"}}>
-                <div className="container">
+            <div className=" homepage" style={{width:"100%"}}>
+                <div className="carousel-container">
                     <SaleCarousel />
                 </div>
                 <h4 className='list-title mt-5'>Programming & Development</h4>

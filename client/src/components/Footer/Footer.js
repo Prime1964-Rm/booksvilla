@@ -8,7 +8,7 @@ var FontAwesome = require('react-fontawesome')
 
 const Footer = () => {
     return (
-        <div className='footer container'>
+        <div className='footer '>
             <div className='social-links'>
                 <a href='https://www.facebook.com/rishabh.mishra.777363/'><img src={facebook} /></a>
                 <a ><img src={insta} /></a>

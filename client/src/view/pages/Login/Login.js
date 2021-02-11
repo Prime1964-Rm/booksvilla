@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import './login.css'
+import NavBarComponent from '../../../components/NavBar/NavBar.component'
 
 const Login = () => {
 
@@ -14,8 +15,9 @@ const Login = () => {
     }
 
     return (
+        <React.Fragment>
+            <NavBarComponent/>
         <div className="container form-container " style={{ backgroundColor: "white" }}>
-
             <img className="loginLogo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIJfVwZ2ouhJCrqQBDb6xDMJBniWgOt3qTg&usqp=CAU" />
             <Form className="login-form" >
                 <Form.Group style={{marginTop:"30px"}}>
@@ -37,6 +39,7 @@ const Login = () => {
                  </Button>
             </Form>
         </div>
+        </React.Fragment>
     )
 }
 

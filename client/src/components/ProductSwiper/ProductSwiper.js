@@ -19,9 +19,9 @@ SwiperCore.use([Navigation, Pagination, Scrollbar, A11y,EffectCoverflow]);
 
 const ProductSwiper = ({dataList}) => {
     return (
-        <div className="container">
+        <div className="product-swiper-container">
             <Swiper  className='book-swiper d-flex justify-content-space-around'
-                slidesPerView='3'
+                slidesPerView={3}
                 spaceBetween={50} 
                 navigation
                 // pagination={{ clickable: true }}

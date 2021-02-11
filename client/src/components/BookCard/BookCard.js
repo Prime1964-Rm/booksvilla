@@ -24,8 +24,9 @@ const BookCard=({item,addItem})=>{
 
     const {title,src,Author} = item
     return(
-       <div onClick={()=>{openProduct(item)}} className='card book-card'>
+       <div className='card book-card'>
            <div
+           onClick={()=>{openProduct(item)}}
            style={{backgroundImage:`url(${src})`}}
            className="book-img-container"><img src={src}/></div>
            <div className="title"><h4>{title}</h4></div>

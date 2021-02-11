@@ -1,6 +1,6 @@
 import React, { Component, useEffect, useState } from 'react'
 import './navbar-styles.scss'
-import CartLogo  from '../../assets/Logos/cart.svg'
+import CartLogo  from '../../assets/Logos/fastcart.png'
 import {toggleHidden} from '../../redux/cart/cartActions'
 import {connect} from 'react-redux'
 import cartReducer from '../../redux/cart/cartReducer'
@@ -13,7 +13,9 @@ const NavBar = ({itemCount,toggleHidden,hidden})=>{
 
     return(
         <React.Fragment>
-        <div className="navbar " style={{position:"sticky",top:"0", zIndex:"+3",width:"100%"}}>
+        <div className="navigationBar"
+        //  style={{position:"sticky",top:"0", zIndex:"+3",width:"100%"}}
+         >
             <div className="logo"><img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIJfVwZ2ouhJCrqQBDb6xDMJBniWgOt3qTg&usqp=CAU"/><font> Books Villa</font></div>
             <div className='content'>
                 <ul hidden={hideNav}>
@@ -26,7 +28,7 @@ const NavBar = ({itemCount,toggleHidden,hidden})=>{
                 </ul>
                 <div className="cart" onClick={toggleHidden}>
                     <img src={CartLogo}/>
-                    <span>{itemCount}</span>
+                    <span className="itemCount">{itemCount}</span>
                 </div>
                
             </div>

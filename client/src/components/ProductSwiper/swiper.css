@@ -32,7 +32,8 @@
   }
 
   .book-swiper{
-      background-color: whitesmoke;
+      /* background-color: whitesmoke; */
+      background-image: linear-gradient(#263238, #000000);
       /* padding-left: 70px; */
       padding-right: 70px;
       border-right: none;
@@ -41,8 +42,8 @@
     }
 
     .swiper-button-prev{
-        background-color: white;
-        padding: 30px;
+        /* background-color: white; */
+        /* padding: 30px; */
         border-radius: 50%;
         color: green;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -50,8 +51,8 @@
     }
 
     .swiper-button-next{
-        background-color: white;
-        padding: 30px;
+        /* background-color: white; */
+        /* padding: 30px; */
         border-radius: 50%;
         color: green;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);

@@ -5,7 +5,8 @@
     justify-content: space-around;
     align-items: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
+    background-image: linear-gradient(#263238, #37474f);
     overflow: visible;
 }
 
@@ -22,8 +23,12 @@
     /* background-color: tomato; */
     /* border-top: 3px solid #00e676; */
     border-bottom: 3px solid #00e676;
-    color: #074e2c;
+    /* color: #074e2c; */
+    color: white;
     padding: 5px 5px 5px 5px;
     width: max-content;
 }
 
+.product-swiper-container{
+    width: 90%;
+}
