@@ -21,9 +21,15 @@ const BookSchema  = new mongoose.Schema({
         type: String,
         required: true
     },
-    rating:{
-        type: Number,
-    },
+    rating:[{
+        userId:{
+            type:String
+        },
+        ratedValue:{
+            type:Number
+        }
+    }
+    ] ,
     stock:{
         type: Number
     }

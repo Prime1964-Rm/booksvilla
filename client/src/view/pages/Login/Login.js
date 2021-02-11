@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import './login.css'
 
 const Login = () => {
+
+    useEffect(()=>{
+        scrollToTop()
+    },[])
+
+    const scrollToTop = () => {
+        window.scrollTo(0, 0);
+    }
+
     return (
         <div className="container form-container " style={{ backgroundColor: "white" }}>
 

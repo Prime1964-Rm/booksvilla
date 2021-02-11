@@ -23,7 +23,6 @@ const NavBar = ({itemCount,toggleHidden,hidden})=>{
                     <Link className="Link">About Us</Link>
                     <Link className="Link" to="/login">Login</Link>
                     <Link className="Link" to="/signup">Sign Up</Link>
-                    <Link className="Link" to="/pdf">PDF Viewer</Link>
                 </ul>
                 <div className="cart" onClick={toggleHidden}>
                     <img src={CartLogo}/>

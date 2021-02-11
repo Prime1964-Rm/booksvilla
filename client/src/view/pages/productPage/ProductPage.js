@@ -13,11 +13,12 @@ import 'swiper/components/scrollbar/scrollbar.scss';
 import 'swiper/components/effect-coverflow/effect-coverflow.scss';
 import BSButton from '../../../components/BSButton/BSButton';
 import NavBarComponent from '../../../components/NavBar/NavBar.component';
+import { useHistory } from 'react-router-dom';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]);
 
 const ProductPage = ({location}) => {
-
+    let history = useHistory()
     const {Author,category,id,price,src,title} = location.state
 
     const scrollToTop = () => {
@@ -74,7 +75,18 @@ const ProductPage = ({location}) => {
                         <font>${price}</font>
                         <span>
                             <BSButton style={{width:"80%"}} className="mb-2" backgroundColor="white" color="#f44336" border="#f44336">Add to Cart</BSButton>
-                            <BSButton style={{width:"80%"}}>Buy Now</BSButton>
+                            <BSButton style={{width:"80%"}} backgroundColor="white" color="#ff6d00" border='#ff6d00'>Buy Now</BSButton>
+                        </span>
+                        <span className="mt-5">
+                        <BSButton 
+                        onClick={()=>{
+                            history.push({
+                                pathname:"/pdf"
+                            })
+                        }}
+                        backgroundColor="white" color="#3f51b5" border="#3f51b5" style={{width:"80%"}}>
+                            Preview
+                        </BSButton>
                         </span>
                     </div>
                 </div>
