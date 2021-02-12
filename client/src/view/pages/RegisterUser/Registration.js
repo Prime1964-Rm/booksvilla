@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button'
 import Col from 'react-bootstrap/esm/Col'
 import Row from 'react-bootstrap/esm/Row'
 import './registration.scss'
+import NavBarComponent from '../../../components/NavBar/NavBar.component'
 
 const RegisterUser = () => {
     
@@ -16,8 +17,10 @@ const RegisterUser = () => {
     }
 
     return (
+        <React.Fragment>
+            <NavBarComponent/>
         <div className="container form-container" style={{ backgroundColor: "white" }}>
-            <img className="loginLogo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIJfVwZ2ouhJCrqQBDb6xDMJBniWgOt3qTg&usqp=CAU"  />
+            <img className="loginLogo" style={{borderRadius:"50px"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIJfVwZ2ouhJCrqQBDb6xDMJBniWgOt3qTg&usqp=CAU"  />
             <Form className="login-form" >
                 <Form.Group style={{marginTop:"30px"}}>
                     <h4 className="shiftToLeft">Create New Account</h4>
@@ -63,6 +66,7 @@ const RegisterUser = () => {
              </Button>
             </Form>
         </div>
+        </React.Fragment>
     )
 }
 
