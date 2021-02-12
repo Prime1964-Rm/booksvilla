@@ -19,13 +19,17 @@ function HomePage({ bookList, StoryBooks, Manga }) {
                 <div className="carousel-container">
                     <SaleCarousel />
                 </div>
-                <h4 className='list-title mt-5'>Programming & Development</h4>
+                <div className="container"> 
+                <h4 className='list-title mt-5'> Programming & Development</h4>
+                </div >
                 <ProductSwiper dataList={bookList} />
-
-                <h4 className='list-title mt-2'>StoryBooks</h4>
+                <div className="container">
+                <h4 className='list-title mt-5'>StoryBooks</h4>
+                </div>
                 <ProductSwiper dataList={StoryBooks} />
-
-                <h4 className='list-title mt-2'>Manga</h4>
+                <div className="container">
+                <h4 className='list-title mt-5'>Manga</h4>
+                </div>
                 <ProductSwiper dataList={Manga} />
             </div>
         </React.Fragment>

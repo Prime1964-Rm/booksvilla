@@ -18,7 +18,7 @@ const Login = () => {
         <React.Fragment>
             <NavBarComponent/>
         <div className="container form-container " style={{ backgroundColor: "white" }}>
-            <img className="loginLogo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIJfVwZ2ouhJCrqQBDb6xDMJBniWgOt3qTg&usqp=CAU" />
+            <img className="loginLogo" style={{borderRadius:"50px"}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgIJfVwZ2ouhJCrqQBDb6xDMJBniWgOt3qTg&usqp=CAU" />
             <Form className="login-form" >
                 <Form.Group style={{marginTop:"30px"}}>
                 <h3>Login</h3>

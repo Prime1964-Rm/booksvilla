@@ -2,7 +2,7 @@ import React, { Component, useState } from 'react';
 import './bsbutton-style.css'
 
 
-const BSButton = ({children,onClick,style,className,fontSize,backgroundColor='white',color='#00e676',border="#00e676"})=>{ 
+const BSButton = ({children,onClick,style,className,fontSize,backgroundColor='#272c34',color='#00e676',border="#00e676"})=>{ 
     
 
         let [styleSheet,setStyleSheet] = useState({
@@ -19,7 +19,9 @@ const BSButton = ({children,onClick,style,className,fontSize,backgroundColor='wh
     
         console.log(styleSheet)
         return(
-            <button className={className} onClick={onClick} style={styleSheet} 
+            <button className={className} 
+            onClick={onClick} 
+            style={styleSheet} 
                 onMouseEnter={()=>{
                    setStyleSheet({
                        ...styleSheet,

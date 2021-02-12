@@ -20,15 +20,34 @@
 }
 
 .list-title{
-    /* background-color: tomato; */
     /* border-top: 3px solid #00e676; */
-    border-bottom: 3px solid #00e676;
+    /* border-bottom: 3px solid #00e676; */
     /* color: #074e2c; */
     color: white;
     padding: 5px 5px 5px 5px;
     width: max-content;
 }
 
+.list-title:before{
+    content:'\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0';
+    text-decoration: line-through;
+    margin: auto 0.5em;
+    color: #00e676;
+}
+
+
+.list-title:after {
+    content:'\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0';
+    text-decoration: line-through;
+    margin: auto 0.5em;
+    color: #00e676;
+    /* width: 100%; */
+  }
+
 .product-swiper-container{
     width: 90%;
 }
+
+
+
+

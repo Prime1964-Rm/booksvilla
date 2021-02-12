@@ -33,7 +33,8 @@
 
   .book-swiper{
       /* background-color: whitesmoke; */
-      background-image: linear-gradient(#263238, #000000);
+      /* background-image: linear-gradient(#263238, #000000); */
+      background-color: rgba(0, 0, 0, 0);
       /* padding-left: 70px; */
       padding-right: 70px;
       border-right: none;
@@ -46,7 +47,7 @@
         /* padding: 30px; */
         border-radius: 50%;
         color: green;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 
     }
 
@@ -55,7 +56,7 @@
         /* padding: 30px; */
         border-radius: 50%;
         color: green;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 
     }
 
@@ -75,4 +76,10 @@
       align-items: center;
     }
 
-  
+/* 
+    .product-swiper-container{
+      border-top: 1px solid #000000;
+      border-bottom: 1px solid #000000;
+    }
+
+     */

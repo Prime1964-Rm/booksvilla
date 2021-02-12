@@ -8,6 +8,7 @@ import BookPage from './BookPage';
 import Login from './view/pages/Login/Login';
 import TestPage from './TestPage'
 import ProductPage from './view/pages/productPage/ProductPage';
+import ProfilePage from './view/pages/profile-page/ProfilePage';
 
 function App() {
   const ProductDetail = {
@@ -27,7 +28,8 @@ function App() {
   }
   return (
     <div className="App" >
-     <Routes/>
+     {/* <Routes/> */}
+      <ProfilePage/>
     </div>
   );
 }
