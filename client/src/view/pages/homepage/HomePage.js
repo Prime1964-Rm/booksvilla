@@ -8,10 +8,13 @@ import ProductSwiper from '../../../components/ProductSwiper/ProductSwiper'
 import { connect } from 'react-redux'
 import Footer from '../../../components/Footer/Footer';
 import NavBarComponent from '../../../components/NavBar/NavBar.component';
+import Banner from '../../../assets/banners/booksvilla-highend2.png'
 // import {useSelector,useDispatch} from 'react-redux'
 
 
-function HomePage({ bookList, StoryBooks, Manga }) {
+function HomePage({ bookList, StoryBooks, Manga,authToken }) {
+    console.log("authToken on HomePage",authToken)
+    
     return (
         <React.Fragment>
             <NavBarComponent />
@@ -27,6 +30,12 @@ function HomePage({ bookList, StoryBooks, Manga }) {
                 <h4 className='list-title mt-5'>StoryBooks</h4>
                 </div>
                 <ProductSwiper dataList={StoryBooks} />
+                {/* <div className="container">
+                    <img style={{
+                        width:"50%",
+                        height:"25%"
+                    }} src={Banner} />
+                </div> */}
                 <div className="container">
                 <h4 className='list-title mt-5'>Manga</h4>
                 </div>
@@ -51,7 +60,9 @@ const mapStateToProps = state => {
         }),
         Manga: state.book.bookList.filter(book => {
             return book.category === 'Manga'
-        })
+        }),
+
+        authToken: state.login.authToken
     }
 }
 

@@ -6,7 +6,7 @@ export default function SaleCarousel(){
 return(
     
 <Carousel className="book-carousel" >
-  <Carousel.Item interval={3000}>
+  <Carousel.Item interval={5000}>
     <img
       className="d-block"
       src='https://i0.wp.com/pointwhiskeypublishing.com/wp-content/uploads/2017/12/point-whiskey-books-banner.jpg?ssl=1'

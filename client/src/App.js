@@ -9,6 +9,7 @@ import Login from './view/pages/Login/Login';
 import TestPage from './TestPage'
 import ProductPage from './view/pages/productPage/ProductPage';
 import ProfilePage from './view/pages/profile-page/ProfilePage';
+import BSToast from './components/toast/Toast';
 
 function App() {
   const ProductDetail = {
@@ -29,7 +30,8 @@ function App() {
   return (
     <div className="App" >
      {/* <Routes/> */}
-      <ProfilePage/>
+      {/* <ProfilePage/> */}
+      <BSToast/>
     </div>
   );
 }

@@ -17,7 +17,6 @@ const BSButton = ({children,onClick,style,className,fontSize,backgroundColor='#2
             ...style
         })
     
-        console.log(styleSheet)
         return(
             <button className={className} 
             onClick={onClick} 
