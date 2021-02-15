@@ -5,17 +5,20 @@ import { toggleHidden } from '../../redux/cart/cartActions'
 import { connect } from 'react-redux'
 import cartReducer from '../../redux/cart/cartReducer'
 import { Cart } from '../Cart'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { setAuthToken } from '../../redux/auth/authAction'
 
 const NavBar = ({ itemCount, toggleHidden, hidden, authToken, setAuthToken }) => {
 
     const [hideNav, setHideNav] = useState(false)
 
+    let history= useHistory( )
+
     const logout = () => {
         localStorage.removeItem("jwt");
         setAuthToken(null)
         console.log(authToken)
+        history.push('/login')
     }
 
     return (

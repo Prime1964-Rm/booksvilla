@@ -58,7 +58,7 @@ const Login = ({setAuthToken}) => {
         }
         catch(err){
             console.error(err)
-            console.log(err.response.errors)
+            console.log(err.response)
             setLoader(false)
             setAuthMessage("Authentication Failed")
         }
