@@ -22,7 +22,7 @@ export const authenticationReducer = (state = initialState,action) =>{
                 users: action.payload,
                 error:''
             }
-        case authActions.Login_USER_FAILURE:
+        case authActions.LOGIN_USER_FAILURE:
             return{
                 loading : false,
                 ...state,
@@ -30,6 +30,9 @@ export const authenticationReducer = (state = initialState,action) =>{
                 error: action.payload
             }
         
-
+        case authActions.LOGOUT_USER:
+            return{
+                ...initialState
+            }    
     }
 }

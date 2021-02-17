@@ -7,7 +7,7 @@ const config = require('config')
 
 const auth = require('../../middleware/auth')
 
-const User = require('../../models/User')
+const User = require('../../models/User');
 
 router.get('/', auth, async (req, res) => {
     try {
@@ -49,13 +49,15 @@ router.post('/',
                     id: user.id
                 }
             }
+            user.password = null
+            console.log(user)
 
             jwt.sign(payload,
                 config.get('jwtSecret'),
                 { expiresIn: 360 },
                 (err, token) => {
                     if (err) throw err;
-                    res.json({ token })
+                    res.json({ token, user })
                 })
         } catch (err) {
             console.error(err.message);

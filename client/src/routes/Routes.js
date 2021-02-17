@@ -22,45 +22,45 @@ import { setAuthToken } from '../redux/auth/authAction'
 //     )} />
 //   )}
 
-let currentAuthToken = localStorage.getItem('jwt')
+// let currentAuthToken = localStorage.getItem('jwt')
 
 
 const Routes = ({ authToken, setAuthToken }) => {
     console.log("ROUTE AUTH TOKEN", authToken)
     console.log(authToken)
 
-    useEffect(() => {
-        refreshAuthToken()
-    }, [])
+    // useEffect(() => {
+    //     refreshAuthToken()
+    // }, [])
 
-    const refreshAuthToken = () => {
-        if (currentAuthToken) {
-            setAuthToken(currentAuthToken)
-        }
-    }
+    // const refreshAuthToken = () => {
+    //     if (currentAuthToken) {
+    //         setAuthToken(currentAuthToken)
+    //     }
+    // }
 
-    const PrivateRoute = ({ component: Component, ...rest }) => {
-        // console.log("this is"+ Auth.isLoggedIn);
-        return (
-            <Route {...rest} render={(props) => (
-                (currentAuthToken || authToken)
-                    ? <Component {...props} />
-                    : <Redirect to='/login' />
-            )} />
-        )
-    }
+    // const PrivateRoute = ({ component: Component, ...rest }) => {
+    //     // console.log("this is"+ Auth.isLoggedIn);
+    //     return (
+    //         <Route {...rest} render={(props) => (
+    //             (currentAuthToken || authToken)
+    //                 ? <Component {...props} />
+    //                 : <Redirect to='/login' />
+    //         )} />
+    //     )
+    // }
 
-    const PublicRoute = ({ component: Component, restricted, ...rest }) => {
-        return (
-            // restricted = false meaning public route
-            // restricted = true meaning restricted route
-            <Route {...rest} render={props => (
-                (currentAuthToken || authToken) && restricted ?
-                    <Redirect to="/" />
-                    : <Component {...props} />
-            )} />
-        );
-    };
+    // const PublicRoute = ({ component: Component, restricted, ...rest }) => {
+    //     return (
+    //         // restricted = false meaning public route
+    //         // restricted = true meaning restricted route
+    //         <Route {...rest} render={props => (
+    //             (currentAuthToken || authToken) && restricted ?
+    //                 <Redirect to="/" />
+    //                 : <Component {...props} />
+    //         )} />
+    //     );
+    // };
 
 
     return (
@@ -68,10 +68,9 @@ const Routes = ({ authToken, setAuthToken }) => {
             <Router>
                 <Switch>
 
-                    <PublicRoute exact path='/signup' restricted={true} component={RegisterUser} />
-
-                    <PrivateRoute exact path='/' component={HomePage} />
-                    <PublicRoute exact path='/login' restricted={true} component={Login} />
+                    <Route exact path='/signup' restricted={true} component={RegisterUser} />
+                    <Route exact path='/' component={HomePage} />
+                    <Route exact path='/login' restricted={true} component={Login} />
                     <Route exact path='/pdf' component={BookPage} />
                     <Route exact path='/productdetails' component={ProductPage} />
                     {/* <Route exact path = '/' /> */}

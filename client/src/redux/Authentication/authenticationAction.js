@@ -16,7 +16,14 @@ export const loginUserSuccess = (users) =>{
 
 export const loginUserFailure = (error) =>{
     return{
-        type: authActions.Login_USER_FAILURE,
+        type: authActions.LOGIN_USER_FAILURE,
         payload: error
+    }
+}
+
+
+export const logOut = () =>{
+    return{
+        type: authActions.LOGOUT_USER
     }
 }
