@@ -9,8 +9,9 @@ import {setAuthToken} from '../../../redux/auth/authAction'
 import { connect } from 'react-redux'
 import { useHistory } from 'react-router-dom'
 
-const Login = ({setAuthToken}) => {
 
+const Login = ({setAuthToken,loading}) => {
+    console.log(loading)
     const history= useHistory()
     const [emailEntered,setEmailEntered] = useState()
     const [passwordEntered,setPasswordEntered] = useState()
@@ -107,10 +108,10 @@ const Login = ({setAuthToken}) => {
     )
 }
 
-const mapDispatchToProps = dispatch =>{
+const mapStateToProps = state =>{
     return{
-        setAuthToken: item=>{dispatch(setAuthToken(item))}
+        loading: state.login.loading
     }
 }
 
-export default connect(null, mapDispatchToProps)(Login)
+export default connect(mapStateToProps,null)(Login)

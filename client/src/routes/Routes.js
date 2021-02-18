@@ -39,29 +39,6 @@ const Routes = ({ authToken, setAuthToken }) => {
     //     }
     // }
 
-    // const PrivateRoute = ({ component: Component, ...rest }) => {
-    //     // console.log("this is"+ Auth.isLoggedIn);
-    //     return (
-    //         <Route {...rest} render={(props) => (
-    //             (currentAuthToken || authToken)
-    //                 ? <Component {...props} />
-    //                 : <Redirect to='/login' />
-    //         )} />
-    //     )
-    // }
-
-    // const PublicRoute = ({ component: Component, restricted, ...rest }) => {
-    //     return (
-    //         // restricted = false meaning public route
-    //         // restricted = true meaning restricted route
-    //         <Route {...rest} render={props => (
-    //             (currentAuthToken || authToken) && restricted ?
-    //                 <Redirect to="/" />
-    //                 : <Component {...props} />
-    //         )} />
-    //     );
-    // };
-
 
     return (
         <React.Fragment>

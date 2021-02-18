@@ -7,7 +7,7 @@ const initialState = {
   }
 
 
-export const authenticationReducer = (state = initialState,action) =>{
+const authenticationReducer = (state = initialState,action) =>{
     console.log(action.type)
     switch(action.type){
         case authActions.LOGIN_USER_REQUEST:
@@ -33,6 +33,13 @@ export const authenticationReducer = (state = initialState,action) =>{
         case authActions.LOGOUT_USER:
             return{
                 ...initialState
+            }  
+
+        default:
+            return{
+                ...initialState
             }    
     }
 }
+
+export default authenticationReducer

@@ -14,7 +14,11 @@ const login = async (email,password) =>{
         password
     }
     try{
-        const res = await axios.post(API_SERVER_URL + "/auth", body)
+        const res = await axios.post(API_SERVER_URL + "/auth", body,{
+            headers:{
+                "Content-Type" : "application/json"
+            }
+        })
         localStorage.setItem("booksVillaAuthToken", res.data.token)
         //then we need to set User
     }
