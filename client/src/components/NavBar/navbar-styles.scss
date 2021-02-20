@@ -38,12 +38,17 @@
 }
 
 .content{
-    width: auto;
+    width: 80%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: flex-end;
 }
+
+.navtabs{
+    display: flex;
+    align-items: center;
+}
+
 
 .content .Link{
     list-style: none;
@@ -85,13 +90,11 @@
 .itemCount{
     position: absolute;
     z-index: 400;
-   left: 96%;
-    top:50%;
-    transform: translateY(-70%);
-    font-size: 14px;
+    transform: translateX(80px);
+    transform: translatey(-2px);
 }
 .cart img{
-    height: 50px;
+    height: 37px;
     cursor: pointer;
 }
 
@@ -110,14 +113,22 @@
 // }
 
 @media only screen and (max-width: 1200px) {
-   
+    .content{
+        width: auto;
+    }
   }
 
 @media only screen and (max-width: 992px) {
-   
+    .content{
+        width: auto;
+    }
+
   }
 
 @media only screen and (max-width: 768px) {
+    .content{
+        width: auto;
+    }
     .cart img{
         display: none;
     }
@@ -143,6 +154,7 @@
         }
     }
     .navigationBar{
+        min-height: 50px;
         height: auto;
         flex-direction: column;
         justify-content: center;
@@ -156,10 +168,6 @@
         width: 100%;
     }
     .content ul{
-        // width: 50%;
-        // height: 100%;
-        // display: flex;
-        // justify-content: space-around;
         width: 100%;
         flex-direction: column;
         justify-content: center;
@@ -196,9 +204,11 @@
     }
     .navigationBar{
         height: auto;
+        width: 100%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        z-index: 16;
     }
     .content .Link{
 
@@ -212,6 +222,7 @@
         // height: 100%;
         // display: flex;
         // justify-content: space-around;
+        // display: none;
         width: 100%;
         flex-direction: column;
         justify-content: center;
@@ -220,4 +231,5 @@
   }
 
 
+ 
 

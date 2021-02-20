@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
-import './login.css'
+import './login.scss'
 import NavBarComponent from '../../../components/NavBar/NavBar.component'
 // import { apis } from '../../../apis/apis'
 import axios from 'axios'

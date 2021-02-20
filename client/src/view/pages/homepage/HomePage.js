@@ -18,16 +18,16 @@ function HomePage({ bookList, StoryBooks, Manga,authToken }) {
     return (
         <React.Fragment>
             <NavBarComponent />
-            <div className=" homepage" style={{width:"100%"}}>
+            <div className=" homepage" style={{width:"100%",overflowX:"scroll"}}>
                 <div className="carousel-container">
                     <SaleCarousel />
                 </div>
                 <div className="container"> 
-                <h4 className='list-title mt-5'> Programming & Development</h4>
+                <font className='list-title mt-5'> Programming & Development</font>
                 </div >
                 <ProductSwiper dataList={bookList} />
                 <div className="container">
-                <h4 className='list-title mt-5'>StoryBooks</h4>
+                <font className='list-title mt-5'>StoryBooks</font>
                 </div>
                 <ProductSwiper dataList={StoryBooks} />
                 {/* <div className="container">
@@ -37,7 +37,7 @@ function HomePage({ bookList, StoryBooks, Manga,authToken }) {
                     }} src={Banner} />
                 </div> */}
                 <div className="container">
-                <h4 className='list-title mt-5'>Manga</h4>
+                <font className='list-title mt-5'>Manga</font>
                 </div>
                 <ProductSwiper dataList={Manga} />
             </div>
