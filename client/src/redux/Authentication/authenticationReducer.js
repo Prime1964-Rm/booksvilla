@@ -19,14 +19,14 @@ const authenticationReducer = (state = initialState,action) =>{
             return{
                 loading:false,
                 ...state,
-                users: action.payload,
+                user: action.payload,
                 error:''
             }
         case authActions.LOGIN_USER_FAILURE:
             return{
                 loading : false,
                 ...state,
-                users: null,
+                user: null,
                 error: action.payload
             }
         

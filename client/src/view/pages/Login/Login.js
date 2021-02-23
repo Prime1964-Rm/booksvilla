@@ -8,9 +8,11 @@ import axios from 'axios'
 import {setAuthToken} from '../../../redux/auth/authAction'
 import { connect } from 'react-redux'
 import { useHistory } from 'react-router-dom'
+import {userActions} from '../../../_actions/users.actions'
+import API_SERVER_URL from '../../../config.json'
+import { loginUserFailure, loginUserRequest, loginUserSuccess } from '../../../redux/Authentication/authenticationAction'
 
-
-const Login = ({setAuthToken,loading}) => {
+const Login = ({loading,loginUserRequest,loginUserSuccess,loginUserFailure}) => {
     console.log(loading)
     const history= useHistory()
     const [emailEntered,setEmailEntered] = useState()
@@ -37,31 +39,29 @@ const Login = ({setAuthToken,loading}) => {
     }
 
 
-    const Login = async () =>{
-        setLoader(true)
-        let body={
-            email:emailEntered,
-            password: passwordEntered
-        }
+    const loginUser = async () =>{
+        loginUserRequest()
+            let body={
+                email: emailEntered,
+                password: passwordEntered
+            }
         try{
             const res = await axios.post('http://localhost:80/api/auth',body)
-            console.log(res)
-            console.log(res.data.token);
-            localStorage.setItem("jwt",res.data.token)
-            setAuthToken(res.data.token)
-            if(res.data.token){
-                setLoader(false)
-                history.push({
-                    pathname:'/'
-                })
-            }
-
+            
+            
+            // localStorage.setItem("jwt",res.data.token)
+                // history.push({
+                //     pathname:'/'
+                // })
+                if(res.status===200){
+                    loginUserSuccess(res.data.user)
+                }
+              
         }
         catch(err){
+            loginUserFailure(err.response)
             console.error(err)
-            console.log(err.response)
-            setLoader(false)
-            setAuthMessage("Authentication Failed")
+                 
         }
     }
 
@@ -92,15 +92,23 @@ const Login = ({setAuthToken,loading}) => {
                     <Form.Check type="checkbox" label="Remember Me" />
                 </Form.Group>
                 <Button
-                onClick={Login}
-                style={{ backgroundColor: "#00c853" }}>
+                className="login-btn mt-3"
+                style={{
+                    backgroundColor:"rgb(0, 200, 83)",
+                    fontWeight:"600",
+                    fontSize:"1.2rem",
+                    width:"100%"
+                }}
+                onClick={loginUser}
+                >
+                    <span>
                   {
                       (loader)?
-                    <span>
-                        <i class="fa fa-spinner fa-spin"></i>
-                        <font>{authMessage}</font>
-                    </span>  :"Login"
+                    
+                        {authMessage}
+                      :"Login"
                   }
+                  </span>
                  </Button>
             </Form>
         </div>
@@ -114,4 +122,12 @@ const mapStateToProps = state =>{
     }
 }
 
-export default connect(mapStateToProps,null)(Login)
+const mapDispatchToProps = dispatch =>{
+    return{
+        loginUserRequest: ()=>{dispatch(loginUserRequest())},
+        loginUserSuccess: (user)=>{dispatch(loginUserSuccess(user))},
+        loginUserFailure: (err) => {dispatch(loginUserFailure(err))}
+    }
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(Login)

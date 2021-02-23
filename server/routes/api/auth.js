@@ -49,15 +49,14 @@ router.post('/',
                     id: user.id
                 }
             }
-            user.password = null
-            console.log(user)
+            let passedUser = await User.findOne({ email }).select('-password')
 
             jwt.sign(payload,
                 config.get('jwtSecret'),
                 { expiresIn: 360 },
                 (err, token) => {
                     if (err) throw err;
-                    res.json({ token, user })
+                    res.json({ token, user:passedUser })
                 })
         } catch (err) {
             console.error(err.message);
